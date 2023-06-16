@@ -5,25 +5,21 @@
  */
 package geometri;
 
-import java.util.Scanner;
 
 public class Persegi {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        double panjang, lebar, keliling, luas;
-        
-        System.out.println("========== KELILING & LUAS PERSEGI PANJANG ==========\n\n");
-        System.out.print("Masukkan panjang persegi panjang   = ");
-        panjang = sc.nextInt();
-        System.out.print("Masukkan lebar persegi panjang     = ");
-        lebar = sc.nextInt();
-        System.out.println("");
-        
-        keliling = 2 * (panjang + lebar);
-        luas = panjang * lebar;
-        
-        System.out.println("Keliling Persegi Panjang           = " +keliling);
-        System.out.println("Luas Persegi Panjang               = " +luas);
+    private double panjang;
+    private double lebar;
+
+    public PersegiPanjang(double panjang, double lebar) {
+        this.panjang = panjang;
+        this.lebar = lebar;
+    }
+
+    public double luas() {
+        return panjang * lebar;
+    }
+
+    public double keliling() {
+        return 2 * (panjang + lebar);
     }
 }
